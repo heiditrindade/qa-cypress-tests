@@ -1,15 +1,17 @@
 import CreateAccountPage from '../../pages/CreateAccountPage';
 
 describe('criar conta', () => {
-  const createAccountPage = new CreateAccountPage();
+    const createAccountPage = new CreateAccountPage();
+    const email = Cypress.env('TEST_EMAIL');
+    const password = Cypress.env('TEST_PASSWORD');
 
   it('criar nova conta', () => {
     createAccountPage.visit();
-    createAccountPage.fillEmail('novousuario1@mail.com');
+    createAccountPage.fillEmail(email);
     createAccountPage.submitCreateButton();
     createAccountPage.fillFirstName('John');
     createAccountPage.fillLastName('Lenão');
-    createAccountPage.fillPassword('entrar123');
+    createAccountPage.fillPassword(password);
     createAccountPage.submitAccountButton();
     createAccountPage.assertAccountCreated();
   });
