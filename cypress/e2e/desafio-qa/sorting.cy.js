@@ -1,9 +1,7 @@
-// import CheckoutPage from "../../pages/CheckoutPage";
 import SigninPage from '../../pages/SigninPage';
 import CategoryPages from '../../pages/CategoryPages';
 
 describe('Sorting Tests', () => {
-    // const checkoutPage = new CheckoutPage();
     const signinPage = new SigninPage();
     const categoryPages = new CategoryPages();
 
